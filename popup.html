@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet"  type="text/css" href="popup.css">
+</head>
+<body>
+
+    <div class="container">
+       <label for="comment">Go to vocabulary - choose level:</label><br>
+     
+       <div id="App1" data-ng-app="nextPage" data-ng-controller="goToProperPage">
+       
+           <div class="row">   
+                <div class="col-xs-4">                
+                    <button type="button" id="clickEasy" ng-click="goToEasyVocabularyPage()" class="btn btn-primary btn-block">Easy</button>
+                </div>
+                <div class="col-xs-4">                
+                    <button type="button" id="clickMedium" ng-click="goToMediumVocabularyPage()" class="btn btn-primary btn-block">Medium</button>
+                </div>
+                <div class="col-xs-4">                
+                    <button type="button" id="clickHeight" ng-click="goToHeightVocabularyPage()" class="btn btn-primary btn-block">Height</button>
+                </div>
+
+            </div>
+        
+        </div>
+        
+        <div id="App2" data-ng-app="myApp" data-ng-controller="addDataToDataBase">
+            
+      
+            
+            <hr class="style2">
+            <label for="comment">Add word to vocobulary:</label>
+            <div class="text_area_properties">
+                <div class="form-group">
+
+                  <textarea class="form-control" rows="1" id="eng_word" placeholder="English word"></textarea>
+                </div>
+            </div>
+
+            <div class="text_area_properties">
+                <div class="form-group">
+                  <textarea class="form-control" rows="1" id="pl_word" placeholder="Polish word"></textarea>
+                </div>
+            </div>
+
+            <label for="comment">Choose difficulty level:</label>
+            <div class="row">
+                        <div class="col-xs-3">
+                              <div class="form-group">
+                                  <label id="easy" for="comment"><input type="radio" name="difficulty_level" value="Easy"> Easy</label>
+                              </div>
+                        </div>
+                         <div class="col-xs-3">
+                              <div class="form-group">
+                                  <label id="medium" for="comment"><input type="radio" name="difficulty_level" value="Medium"> Medium</label>
+                              </div>
+                        </div>
+                         <div class="col-xs-3">
+                              <div class="form-group">
+                                  <label id="height" for="comment"><input type="radio" name="difficulty_level" value="Height"> Height</label>
+                              </div>
+                        </div>
+            </div>
+
+            <button type="button" id="clickme"  ng-click="addWordToVocabulary()" class="btn btn-primary btn-block">Add to vocabulary</button>
+            
+        </div>
+        
+        
+       
+    </div>
+    
+     <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+   
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
